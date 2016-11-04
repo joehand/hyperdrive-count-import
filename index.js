@@ -30,7 +30,7 @@ module.exports = function (archive, dir, opts, cb) {
   function countFiles (data, next) {
     if (opts.ignore && match(opts.ignore, data.filepath)) return next()
     if (data.type === 'file') {
-      countStats.files  += 1
+      countStats.files += 1
       countStats.bytes += data.stat.size
       importer.emit('file counted')
     }
