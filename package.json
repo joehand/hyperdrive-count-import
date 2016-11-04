@@ -1,0 +1,25 @@
+{
+  "name": "hyperdrive-count-import",
+  "version": "1.0.0",
+  "description": "Count and import a directory to hyperdrive",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joehand/hyperdrive-count-import.git"
+  },
+  "author": "Joe Hand <joe@hand.email> (https://joeahand.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joehand/hyperdrive-count-import/issues"
+  },
+  "homepage": "https://github.com/joehand/hyperdrive-count-import#readme",
+  "dependencies": {
+    "anymatch": "^1.3.0",
+    "folder-walker": "^3.0.0",
+    "hyperdrive-import-files": "^2.4.2",
+    "stream-each": "^1.1.2"
+  }
+}
