@@ -1,6 +1,6 @@
 {
   "name": "hyperdrive-count-import",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Count and import a directory to hyperdrive",
   "main": "index.js",
   "scripts": {
