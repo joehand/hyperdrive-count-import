@@ -3,8 +3,11 @@ var walker = require('folder-walker')
 var hyperImport = require('hyperdrive-import-files')
 var each = require('stream-each')
 
-module.exports = function (archive, dir, opts, cb) {
-  if (typeof opts === 'function') cb = opts
+module.exports = countImport
+
+function countImport (archive, dir, opts, cb) {
+
+  if (typeof opts === 'function') return countImport(archive, dir, {}, cb)
   if (!opts) opts = {}
   var importer
   var countStats = {
@@ -17,11 +20,7 @@ module.exports = function (archive, dir, opts, cb) {
     importer.emit('count finished', countStats)
   })
 
-  importer = hyperImport(archive, dir, {
-    live: opts.live,
-    resume: opts.resume,
-    ignore: opts.ignore
-  }, cb)
+  importer = hyperImport(archive, dir, opts, cb)
 
   importer.countStats = countStats // TODO: make importer vs count stats clearer
 
