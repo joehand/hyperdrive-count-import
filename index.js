@@ -6,7 +6,6 @@ var each = require('stream-each')
 module.exports = countImport
 
 function countImport (archive, dir, opts, cb) {
-
   if (typeof opts === 'function') return countImport(archive, dir, {}, cb)
   if (!opts) opts = {}
   var importer
