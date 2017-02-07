@@ -18,7 +18,7 @@
   "homepage": "https://github.com/joehand/hyperdrive-count-import#readme",
   "dependencies": {
     "anymatch": "^1.3.0",
-    "folder-walker": "^3.0.0",
+    "folder-walker": "^3.0.1",
     "hyperdrive-import-files": "^2.8.0",
     "stream-each": "^1.1.2"
   }
